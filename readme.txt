@@ -4,7 +4,7 @@ Donate Link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: posts, images from posts, retrieve images, get images, grab images, post images, pictures, photos
 Requires at least: 2.7
 Tested up to: 2.7.1
-Stable tag: 1.0
+Stable tag: 1.0.1
 
 == Description ==
 
@@ -54,6 +54,11 @@ The following:
 would display all images from a post with their original width and height, a class name of alignright and a link to the post.
 
 == Change Log ==
+
+1.0.1 (2009-03-16)
+<ul>
+<li>Fixed issue with "All" variable</li>
+</ul>
 
 1.0 (2009-03-11)
 Initial Public Release

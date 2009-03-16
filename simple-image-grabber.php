@@ -4,7 +4,7 @@ Plugin Name: Simple Image Grabber
 Plugin URI: http://bavotasan.com/
 Description: Grabs an image from a post and displays it.
 Author: c.bavota
-Version: 1.0
+Version: 1.0.1
 Author URI: http://bavotasan.com
 */
 
@@ -26,7 +26,7 @@ function images($num = 1, $width = null, $height = null, $class = 'alignleft', $
 		$replace = array('/width="[^"]*" /','/height="[^"]*" /','/class="[^"]*" /');
 		$postOutput = preg_replace($replace, '',$postOutput);
 		$image[$i] = $postOutput;
-		$start=$imgEnd+1;
+		$start=$imgBeg+$imgEnd+1;
 	}
 	if($num == 'all') {
 		$x = count($image);
