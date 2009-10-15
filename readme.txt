@@ -3,8 +3,8 @@ Contributors: c.bavota
 Donate Link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=1929921
 Tags: posts, images from posts, retrieve images, get images, grab images, post images, pictures, photos
 Requires at least: 2.7
-Tested up to: 2.8
-Stable tag: 1.0.1
+Tested up to: 2.8.4
+Stable tag: 1.0.2
 
 == Description ==
 
@@ -54,6 +54,11 @@ The following:
 would display all images from a post with their original width and height, a class name of alignright and a link to the post.
 
 == Change Log ==
+
+1.0.2 (2009-10-15)
+<ul>
+<li>Added original width and height to img tag if neither is set</li>
+</ul>
 
 1.0.1 (2009-03-16)
 <ul>
