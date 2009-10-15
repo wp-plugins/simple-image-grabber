@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Simple Image Grabber WordPress plugin | Version 1.0.2</title>
+<style type="text/css">
+code {
+	background: #ddd;
+	}
+
+h1 {
+	margin-bottom: 0;
+	}	
+
+</style>
+</head>
+
+<body>
+<h1>Simple Image Grabber</h1>
+Version 1.0.2<br />
+WordPress plugin<br />
+<br />
+<strong>== Installation ==</strong><br />
+<br />
+1. Unzip the simple-image-grabber.zip file.<br />
+2. Upload the `simple-image-grabber` folder to the `/wp-content/plugins/` directory.<br />
+3. Activate the plugin through the 'Plugins' menu in WordPress.<br />
+4. Place <code>&lt;?php images(); ?&gt;</code> within the loop to grab your post's images.<br />
+<br />
+<strong>== Frequently Asked Questions ==</strong> <br />
+<br />
+1) How can I customize the Simple Image Grabber function?<br />
+<br />
+The function from this plugin accepts five variables. <br />
+<br />
+The basic use of the function looks like: <code>&lt;?php images('1'); ?&gt;</code> or <code>&lt;?php images(); ?&gt;</code><br />
+<br />
+This will display the first image from your post, with its default width and height, no class name and a link to the post.<br />
+<br />
+This is how the function looks with all variables:<br />
+<br />
+<code>&lt;?php images($number, $width, $height, $class, $link); ?&gt;</code><br />
+<br />
+$number = the image you want to pull from your post, ie. the first image from the post ('1') or the second image from the post ('2') and so on. NOTE: If you use 'all', it will display all images from the post.<br />
+<br />
+$width = the width of the displayed image<br />
+<br />
+$height = the height of the displayed image<br />
+<br />
+$class = the class name you would like to assign to the displayed image<br />
+<br />
+$link = whether you would like the displayed image to link to the post or not<br />
+<br />
+So, the following function:<br />
+<br />
+<code>&lt;?php images('2', '150', '200', 'alignleft', false); ?&gt;</code><br />
+<br />
+would display the second image from a post (if there is one) with a width of 150px and a height of 200px, the class name alignleft and no link to the post.<br />
+<br />
+The following:<br />
+<br />
+<code>&lt;?php images('all', '', '', 'alignright'); ?&gt;</code><br />
+<br />
+would display all images from a post with their original width and height, a class name of alignright and a link to the post.<br />
+<br />
+<br />
+<strong>== Change Log ==</strong><br />
+<br />
+1.0.2 (2009-10-15)
+<ul>
+<li>Added original width and height to img tag if neither is set</li>
+</ul>
+<br />
+1.0.1 (2009-03-16)
+<ul>
+<li>Fixed issue with "All" variable</li>
+</ul>
+<br />
+1.0 (2009-03-11)
+<ul>
+<li>Initial Public Release</li>
+</ul>
+
+<br />
+<small>Simple Image Grabber plugin created by <a href="http://bavotasan.com">c.bavota</a>.<br />
+<br />
+Copyright &copy; c.bavota. All Rights Reserved.</small><br /><br />
+<a href="http://bavotasan.com"><img src="http://bavotasan.com/wp-content/themes/bavotasan/images/bavota.png" alt="Bavota San" border="0" width="40px" /></a>
+</body>
+</html>
