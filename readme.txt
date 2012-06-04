@@ -3,12 +3,12 @@ Contributors: c.bavota
 Donate Link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=1929921
 Tags: posts, images from posts, retrieve images, get images, grab images, post images, pictures, photos
 Requires at least: 2.7
-Tested up to: 2.8.4
-Stable tag: 1.0.2
+Tested up to: 3.4
+Stable tag: 1.0.3
 
 == Description ==
 
-Grabs an image from a post and displays it. Options include image width, height, class name and link. Can also display every image from a post if the $number variable is set to 'all'.
+Display one or all images from a post's content. Options include image width, height, class and permalink.
 
 == Installation ==
 
@@ -21,15 +21,28 @@ Grabs an image from a post and displays it. Options include image width, height,
 
 1) How can I customize the Simple Image Grabber function?
 
-The function from this plugin accepts five variables. 
+The images() function accepts five variables. 
 
-The basic use of the function looks like: `<?php images('1'); ?>` or `<?php images(); ?>`
+The basic use of the function looks like: `<?php images( '1' ); ?>` or `<?php images(); ?>`
 
-This will display the first image from your post, with its default width and height, no class name and a link to the post.
+This will display the first image from your post, with its default width and height, no class and a permalink to the post.
 
-This is how the function looks with all variables:
+This is how the function looks with passing all variables directly or through an array:
 
-`<?php images($number, $width, $height, $class, $link); ?>`
+`<?php images( $number, $width, $height, $class, $permalink, $echo ); ?>`
+
+`<?php 
+$defaults = array(
+	'number' => 1,
+	'width' => null,
+	'height' => null,
+	'class' => 'alignleft',
+	'permalink' => true,
+	'echo' => true
+);
+
+images( $defaults ); 
+?>`
 
 $number = the image you want to pull from your post, ie. the first image from the post ('1') or the second image from the post ('2') and so on. NOTE: If you use 'all', it will display all images from the post.
 
@@ -37,23 +50,37 @@ $width = the width of the displayed image
 
 $height = the height of the displayed image
 
-$class = the class name you would like to assign to the displayed image
+$class = the class you would like to assign to the displayed image
 
-$link = whether you would like the displayed image to link to the post or not
+$permalink = whether you would like the image to link to the post or not
 
-So, the following function:
+$echo = echo or return the value
 
-`<?php images('2', '150', '200', 'alignleft', false); ?>`
+The following function will echo the second image from a post (if there is one) with a width of 150px and a height of 200px, the class "alignleft" and no link to the post.
 
-would display the second image from a post (if there is one) with a width of 150px and a height of 200px, the class name alignleft and no link to the post.
+`<?php images( '2', '150', '200', 'alignleft', false ); ?>`
 
-The following:
+The following will return all images from a post with their original width and height, a class name of alignright and a link to the post.
 
-`<?php images('all', '', '', 'alignright'); ?>`
+`<?php 
+$args = array(
+	'number' => 'all',
+	'class' => 'alignright',
+	'echo' => 0
+);
 
-would display all images from a post with their original width and height, a class name of alignright and a link to the post.
+$all_images = images( $args );
+?>`
 
 == Change Log ==
+
+1.0.3 (2012-06-04)
+<ul>
+<li>Added the ability to pass an array to the images() function</li>
+<li>Added the ablity to either echo or return the value string</li>
+<li>Cleaned up and improved code</li>
+<li>Added comments and PHPDocs</li>
+</ul>
 
 1.0.2 (2009-10-15)
 <ul>
