@@ -1,6 +1,6 @@
 === Simple Image Grabber ===
 Contributors: c.bavota
-Donate Link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=cbavota%40gmail%2ecom&lc=US&no_note=0&currency_code=CAD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHostedGuest
+Donate Link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=4W58JWNBHWKK4
 Tags: posts, images from posts, retrieve images, get images, grab images, post images, pictures, photos
 Requires at least: 2.7
 Tested up to: 3.4
