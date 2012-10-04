@@ -1,6 +1,6 @@
 === Simple Image Grabber ===
 Contributors: c.bavota
-Donate Link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=1929921
+Donate Link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=cbavota%40gmail%2ecom&lc=US&no_note=0&currency_code=CAD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHostedGuest
 Tags: posts, images from posts, retrieve images, get images, grab images, post images, pictures, photos
 Requires at least: 2.7
 Tested up to: 3.4
@@ -17,11 +17,11 @@ Display one or all images from a post's content. Options include image width, he
 3. Activate the plugin through the 'Plugins' menu in WordPress.
 4. Place `<?php images(); ?>` within the loop to grab your post's images.
 
-== Frequently Asked Questions == 
+== Frequently Asked Questions ==
 
 1) How can I customize the Simple Image Grabber function?
 
-The images() function accepts five variables. 
+The images() function accepts five variables.
 
 The basic use of the function looks like: `<?php images( '1' ); ?>` or `<?php images(); ?>`
 
@@ -31,7 +31,7 @@ This is how the function looks with passing all variables directly or through an
 
 `<?php images( $number, $width, $height, $class, $permalink, $echo ); ?>`
 
-`<?php 
+`<?php
 $defaults = array(
 	'number' => 1,
 	'width' => null,
@@ -41,7 +41,7 @@ $defaults = array(
 	'echo' => true
 );
 
-images( $defaults ); 
+images( $defaults );
 ?>`
 
 $number = the image you want to pull from your post, ie. the first image from the post ('1') or the second image from the post ('2') and so on. NOTE: If you use 'all', it will display all images from the post.
@@ -62,7 +62,7 @@ The following function will echo the second image from a post (if there is one) 
 
 The following will return all images from a post with their original width and height, a class name of alignright and a link to the post.
 
-`<?php 
+`<?php
 $args = array(
 	'number' => 'all',
 	'class' => 'alignright',
@@ -73,6 +73,11 @@ $all_images = images( $args );
 ?>`
 
 == Change Log ==
+
+1.0.4 (2012-10-04)
+<ul>
+<li>Updated donate link</li>
+</ul>
 
 1.0.3 (2012-06-04)
 <ul>
