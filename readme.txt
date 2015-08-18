@@ -1,10 +1,10 @@
 === Simple Image Grabber ===
-Contributors: c.bavota
+Contributors: tinkerpriest
 Donate Link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=4W58JWNBHWKK4
 Tags: posts, images from posts, retrieve images, get images, grab images, post images, pictures, photos
 Requires at least: 2.7
-Tested up to: 3.4
-Stable tag: 1.0.3
+Tested up to: 4.3
+Stable tag: 1.0.5
 
 == Description ==
 
@@ -73,6 +73,13 @@ $all_images = images( $args );
 ?>`
 
 == Change Log ==
+
+1.0.5 (2015-8-18)
+<ul>
+<li>Added validation</li>
+<li>Updated contributor username</li>
+<li>Updated version and stable tag</li>
+</ul>
 
 1.0.4 (2012-10-04)
 <ul>

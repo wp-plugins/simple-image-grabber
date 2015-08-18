@@ -4,12 +4,12 @@ Plugin Name: Simple Image Grabber
 Plugin URI: http://bavotasan.com/2009/simple-image-grabber-wordpress-plugin/
 Description: Display one or all images from a post's content.
 Author: c.bavota
-Version: 1.0.4
+Version: 1.0.5
 Author URI: http://bavotasan.com
 License: GPL2
 */
 
-/*  Copyright 2012  c.bavota  (email : cbavota@gmail.com)
+/*  Copyright 2015  c.bavota  (email : cbavota@gmail.com)
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License, version 2, as
@@ -69,10 +69,10 @@ function images( $num = 1, $width = null, $height = null, $class = 'alignleft', 
 	$more = 1;
 
 	// Setup variables according to passed parameters
-	$size = empty( $width ) ? '' : ' width="' . $width . 'px"';
-	$size = empty( $height ) ? $size : $size . ' height="' . $height . 'px"';
-	$class = empty( $class ) ? '' : ' class="' . $class . '"';
-	$link = empty( $permalink ) ? '' : '<a href="' . get_permalink() . '">';
+	$size = empty( $width ) ? '' : ' width="' . esc_attr( $width ) . 'px"';
+	$size = empty( $height ) ? $size : $size . ' height="' . esc_attr( $height ) . 'px"';
+	$class = empty( $class ) ? '' : ' class="' . esc_attr( $class ) . '"';
+	$link = empty( $permalink ) ? '' : '<a href="' . esc_url( get_permalink() ) . '">';
 	$linkend = empty( $permalink ) ? '' : '</a>';
 
 	$content = get_the_content();
